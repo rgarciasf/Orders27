@@ -36,7 +36,7 @@ class Service{
                 
             } catch {
                 completion(nil, err)
-                print("Fsiled to Decode: ", err)
+                print("Failed to Decode: ", err)
             }
             }.resume()
     }
@@ -62,5 +62,13 @@ class Service{
         fetchGenericJSONData(urlString: urlString, completion: completion)
     }
     
+    func fetchFirstMenuItems(completion: @escaping (ItemMenu?, Error?) -> Void) {
+        let urlString = "https://api.myjson.com/bins/95c7y"
+        fetchGenericJSONData(urlString: urlString, completion: completion)
+    }
+    func fetchSecondMenuItems(completion: @escaping (ItemMenu?, Error?) -> Void) {
+        let urlString = "https://api.myjson.com/bins/1a4cvy"
+        fetchGenericJSONData(urlString: urlString, completion: completion)
+    }
 }
 

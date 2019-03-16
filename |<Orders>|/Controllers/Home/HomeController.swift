@@ -38,6 +38,7 @@ class HomeController: BaseController, UICollectionViewDelegateFlowLayout{
     }
     
     var homeHeaderItems = [HomeHeaderItems]()
+    var groups = [ItemGroup]()
     
     //2.-Header
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -75,9 +76,6 @@ class HomeController: BaseController, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return .init(top: 16, left: 0, bottom: 0, right: 0)
     }
-    
-    //var itemsHomeSection: ItemGroup?
-    var groups = [ItemGroup]()
     
     fileprivate func fetchData() {
         

@@ -14,8 +14,8 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
         
         viewControllers = [
+            createNavController(viewController: MenuSectionController(), title: "Menu", imageName: "menu"),
             createNavController(viewController: HomeController(), title: "Home", imageName: "home"),
-            createNavController(viewController: UIViewController(), title: "Menu", imageName: "menu"),
             createNavController(viewController: UIViewController(), title: "Orders", imageName: "orders"),
             createNavController(viewController: ChatController(), title: "Chat", imageName: "chat"),
             createNavController(viewController: UIViewController(), title: "Deliver", imageName: "deliver"),           
